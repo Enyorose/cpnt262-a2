@@ -1,8 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light: #d3dddc;
+  --darkblue:  #405f6a;
+  --medblue: #63919f;
+  --pink: #f5b9ab; 
+  --dk-purple: #200533;
+  --dk-medpurple: #400c48;
+  --dk-lightpurple: #763178;
+}
+body {
+  background-color: var(--light);
+  transition: 1s;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.dark-mode{
+  background-color: var(--dk-purple);
+  transition: 1s;
+  color: var(--light);
+}
+.move-right {
+  transform: translateX(100%);
+  filter:hue-rotate(70deg);
+  transition-duration: 1s;
+}
+nav {
+  display: flex;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.wrapper {
+  margin-left: .5em;
+}
+
+.first-circle {
+  width: 75px;
+  height: 37px;
+  background-color: var(--pink);
+  border-radius: 30%;
+}
+.second-circle {
+  width: 35px;
+  height: 35px;
+  background-color: var(--darkblue);
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+.dark-circle {
+  background-color: var(--dk-lightpurple);
+}
+
 article {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-gap: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-top: 2em;
+  
+}
 
-  margin: auto;
+figure {
+  border: 1px solid var(--medblue);
+  text-align: center;
 }
 

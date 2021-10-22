@@ -100,15 +100,30 @@ const photoILove = [
     creditURL: 'https://pixabay.com/users/free-photos-242387/?tab=popular'
   }
 ]
+//output variable
 let picture = '';
+//foreach 
 photoILove.forEach(function(item){
- picture = picture + `
+ picture = picture + `<figure>
  <a href="${item.linkURL}">
   <img src="assets/images/sm/${item.pathURL}" width = "${item.width}" height = "${item.height}" alt="${item.description}">
  </a>
  <figcaption>${item.title}</figcaption>
+ </figure>
  `
- 
 })
+
 const photo = document.querySelector('.container')
 photo.innerHTML = picture
+
+const button = document.querySelector(".second-circle")
+const container = document.querySelector(".first-circle")
+const dark = document.querySelector("body")
+
+const toggleHandler = function () { 
+  
+  button.classList.toggle("move-right")
+  dark.classList.toggle("dark-mode")
+  container.classList.toggle("dark-circle")
+}
+button.addEventListener('click', toggleHandler)
